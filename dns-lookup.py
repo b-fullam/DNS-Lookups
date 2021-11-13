@@ -15,11 +15,11 @@ def dnsLookupList():
     with open(input("\nEnter file name and/or path: ")) as fcontent:
         fstring = fcontent.readlines()
     
-    # declaring the regex pattern to filter out invalid domain entries from a list
+    # declaring the regex pattern to grab the most complete parts of the domain entries from a list to reduce errors
     pattern = re.compile(r'(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?')
 
     lst=[]
-
+    
     # extracting the domains
     for line in fstring:
         lst.append(pattern.search(line)[0])
