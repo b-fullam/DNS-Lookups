@@ -35,12 +35,12 @@ def dnsLookupList():
 
     
 
-# Prompt user for input type of a single IP or import a list of IP addresses
-single_or_multiple_ips = int(input("Enter '1' for single entry or '2' to import a list of domain names: \n"))
+# Prompt user for input type of a single domain or import a list of domains
+single_or_multiple_domains = int(input("Enter '1' for single entry or '2' to import a list of domain names: \n"))
 
 # Conditional statement to handle user input for a single domain
 # or call the function to handle the imported list of domains
-if single_or_multiple_ips == 1:
+if single_or_multiple_domains == 1:
     dnsLookup(input("\nEnter Domain: "))
 else: 
     dnsLookupList()
